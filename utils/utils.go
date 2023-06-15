@@ -259,7 +259,7 @@ func Ping(address string, secondsTimeout int) (int64, error) {
 		return 0, err
 	}
 
-	ping.Count = 1
+	ping.Count = 5
 	ping.Timeout = time.Second * time.Duration(secondsTimeout)
 
 	if runtime.GOOS == "windows" {
